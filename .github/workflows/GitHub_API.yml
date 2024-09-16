@@ -1,0 +1,35 @@
+name: GitHub API
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up environment
+        run: |
+          echo "MY_SECRET=${{ secrets.TOKEN }}" >> $GITHUB_ENV
+      - name: Use secret
+        run: |
+          echo $MY_SECRET
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install requirements
+        run: pip install -r GitHub_API/requirements.txt
+
+      - name: Run script
+        run: python GitHub_API/test_api.py
