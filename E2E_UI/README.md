@@ -3,7 +3,7 @@
 1. Установите python версии 3.10.4 или выше с офф. сайта [Python](https://www.python.org/downloads/)
 2. Установите зависимости из папки E2E UI `pip install -r requirements.txt`
 3. Установите Chrome под вашу ОС с офф. сайта -> [Chrome](https://developer.chrome.com/docs/chromedriver/downloads?hl=ru)<br> 
-**P.S. Если у вас отсутствует Chrome, скрипт работать не будет. Скачать его можно по той же ссылке**
+**P.S. Если у вас отсутствует Chrome, скрипт работать не будет**
 4. Запустите скрипт `python main.py`
 
 P.S. Если у вас Linux и не получается установить Chrome, то используйте этот скрипт:<br>
